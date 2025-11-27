@@ -1,4 +1,3 @@
-
 function Info(btn) {
   const info = btn.parentElement.nextElementSibling
   const card = btn.parentElement.parentElement
