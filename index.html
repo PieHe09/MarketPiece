@@ -3,18 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MarketPiece Car's</title>
+  <title>MarketPiece Car's - Clássicos Eternos</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
 </head>
 <body>
-  <header>MarketPiece</header>
-  <h1 class="titulo">🚗Loja de Carros Antigos</h1>  
+  <header class="header">
+    <img src="img/logo.png" alt="Logo MarketPiece Car's" class="logo">
+    <h1 class="titulo">Loja de Carros Antigos</h1>
+  </header>
 
-  <div id="modalCompra" class="modal" style="display: none;">
+  <div class="subtitle">
+    <p>Clássicos restaurados com paixão • Peças únicas da história automotiva</p>
+  </div>
+
+  <!-- MODAL -->
+  <div id="modalCompra" class="modal" class="modal" style="display: none;">
     <div class="modal-content">
       <span class="close" onclick="fecharModal()">&times;</span>
-      <h2> Finalizar Compra</h2>
+      <h2>Finalizar Compra</h2>
       <div id="detalhesCarro"></div>
       <div class="form-compra">
         <input type="text" id="nomeCliente" placeholder=" Nome Completo" required>
@@ -25,145 +32,177 @@
       <div class="total-compra">
         <h3>Total: <span id="valorTotal">R$ 0,00</span></h3>
       </div>
-      <button onclick="confirmarCompra()" class="btn-confirmar"> Confirmar Compra</button>
+      </div>
+      <button onclick="confirmarCompra()" class="btn-confirmar">Confirmar Compra</button>
     </div>
   </div>
 
   <div class="container">
-    <!-- CARD 1 -->
-    <div class="card" data-preco="85000">
-      <img src="https://tse1.mm.bing.net/th/id/OIP.U_lml1ebqLOD8Nd0U5KfEAHaE8?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Ford Mustang Mach-1 1973">
-      <h3>Ford Mustang Mach 1 1973</h3>
-      <p>Um ícone dos muscle cars americanos, com motor V8 e estilo agressivo.</p>
-      <div class="buttons">
-        <button onclick="Info(this)" class="btn-info">Ver Mais</button>
-        <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
-      </div>
-      <div class="info" style="display: none;">
-        <img src="https://c8.alamy.com/comp/2YW58GP/bristol-uk-august-11-2024-rear-view-of-dark-green-ford-mustang-1969-mach-1-2YW58GP.jpg" alt="Costas do Mustang Mach-1">
-        <p><strong> Preço:</strong> R$ 85.000,00<br>Motor 351 Cleveland V8, 275 hp, 0–100 km/h em 7,5s</p>
-      </div>
-    </div>
 
-    <!-- CARD 2 -->
-    <div class="card" data-preco="32000">
-      <img src="img/belina f.jpeg" alt="Belina luxo frente">
-      <h3>Belina Luxo 1973</h3>
-      <p>Um clássico brasileiro das estradas, com visual robusto e mecânica confiável.</p>
-      <div class="buttons">
-        <button onclick="Info(this)" class="btn-info">Ver Mais</button>
-        <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
-      </div>
-      <div class="info" style="display: none;">
-        <img src="img/belina t.jpeg" alt="Costas da belina">
-        <p><strong> Preço:</strong> R$ 32.000,00<br>Motor 1.4L 4 cilindros, 68 cv, tração dianteira</p>
-      </div>
-    </div>
+    <section class="marca-section">
+      <h2 class="marca-titulo">FORD</h2>
+      <div class="cards-grid">
+        
+        <div class="card" data-preco="85000">
+          <img src="https://tse1.mm.bing.net/th/id/OIP.U_lml1ebqLOD8Nd0U5KfEAHaE8" alt="Ford Mustang Mach 1 1973">
+          <h3>Mustang Mach 1 1973</h3>
+          <p>Muscle car americano com motor V8 351 Cleveland.</p>
+          <div class="buttons">
+            <button onclick="Info(this)" class="btn-info">Ver Mais</button>
+            <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
+          </div>
+          <div class="info" style="display: none;">
+            <img src="https://c8.alamy.com/comp/2YW58GP/bristol-uk-august-11-2024-rear-view-of-dark-green-ford-mustang-1969-mach-1-2YW58GP.jpg" alt="Traseira">
+            <p><strong>R$ 85.000,00</strong><br>351 Cleveland V8 • 275 cv • 0-100 em 7,5s</p>
+          </div>
+        </div>
 
-    <!-- CARD 3 -->
-    <div class="card" data-preco="45000">
-      <img src="img/C-15 f.jpeg" alt="C-15 frente">
-      <h3>C-15 1973</h3>
-      <p>Uma clássica caminhonete Chevrolet, robusta e confiável.</p>
-      <div class="buttons">
-        <button onclick="Info(this)" class="btn-info">Ver Mais</button>
-        <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
-      </div>
-      <div class="info" style="display: none;">
-        <img src="img/c-15 cost.jpg" alt="Costas da c-15">
-        <p><strong> Preço:</strong> R$ 45.000,00<br>Motor 4.1L 6 cilindros, 151 cv, tração traseira</p>
-      </div>
-    </div>
+    
+        <div class="card" data-preco="32000">
+          <img src="img/belina f.jpeg" alt="Belina Luxo 1973">
+          <h3>Belina Luxo 1973</h3>
+          <p>Clássico brasileiro robusto e cheio de história.</p>
+          <div class="buttons">
+            <button onclick="Info(this)" class="btn-info">Ver Mais</button>
+            <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
+          </div>
+          <div class="info" style="display: none;">
+            <img src="img/belina t.jpeg" alt="Traseira">
+            <p><strong>R$ 32.000,00</strong><br>Motor 1.4L • 68 cv • Tração dianteira</p>
+          </div>
+        </div>
 
-    <!-- CARD 4 -->
-    <div class="card" data-preco="125000">
-      <img src="img/monterrey f.jpeg" alt="Monterrey 1963 Conversivel">
-      <h3>Mercury Monterrey 1963</h3>
-      <p>Um conversível americano luxuoso e potente.</p>
-      <div class="buttons">
-        <button onclick="Info(this)" class="btn-info">Ver Mais</button>
-        <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
+        <div class="card" data-preco="18900">
+          <img src="https://www.picellileiloes.com.br/arquivos/leiloes/lotes/imagens/60df28eaa1f90.peg" alt="Corcel II 1979">
+          <h3>Corcel II 1979</h3>
+          <p>Cupê nervoso com atitude única.</p>
+          <div class="buttons">
+            <button onclick="Info(this)" class="btn-info">Ver Mais</button>
+            <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
+          </div>
+          <div class="info" style="display: none;">
+            <img src="https://www.picellileiloes.com.br/arquivos/leiloes/lotes/imagens/60df28eaa2885.peg" alt="Traseira">
+            <p><strong>R$ 18.900,00</strong><br>Motor 1.4 • Câmbio manual 4 marchas</p>
+          </div>
+        </div>
       </div>
-      <div class="info" style="display: none;">
-         <img src="img/monterrey t.jpeg" alt="Costas do monterrey">
-        <p><strong> Preço:</strong> R$ 125.000,00<br>Motor 6.4L V8, 330 cv, tração traseira</p>
-      </div>
-    </div>
+    </section>
 
-    <!-- CARD 5 -->
-    <div class="card" data-preco="28000">
-      <img src="img/passat f.jpeg" alt="Passat LS 1980">
-      <h3>Passat LS 1980</h3>
-      <p>Um sedan moderno com design arrojado e conforto.</p>
-      <div class="buttons">
-        <button onclick="Info(this)" class="btn-info">Ver Mais</button>
-        <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
-      </div>
-      <div class="info" style="display: none;">
-         <img src="img/passat t.jpeg" alt="Costas do passat">
-        <p><strong> Preço:</strong> R$ 28.000,00<br>Motor 1.6L 4 cilindros, 85 cv, tração dianteira</p>
-      </div>
-    </div>
+    <!-- CHEVROLET -->
+    <section class="marca-section">
+      <h2 class="marca-titulo">CHEVROLET</h2>
+      <div class="cards-grid">
+        <div class="card" data-preco="45000">
+          <img src="img/C-15 f.jpeg" alt="C-15 1973">
+          <h3>C-15 1973</h3>
+          <p>Caminhonete clássica, robusta e lendária.</p>
+          <div class="buttons">
+            <button onclick="Info(this)" class="btn-info">Ver Mais</button>
+            <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
+          </div>
+          <div class="info" style="display: none;">
+            <img src="img/c-15 cost.jpg" alt="Traseira">
+            <p><strong>R$ 45.000,00</strong><br>Motor 4.1L 6 cil • 151 cv</p>
+          </div>
+        </div>
 
-    <!-- CARD 6 -->
-    <div class="card" data-preco="65000">
-      <img src="img/opala f.jpeg" alt="Opala Comodoro 1981">
-      <h3>Opala Comodoro 1981</h3>
-      <p>Um sedan de luxo e desempenho marcante.</p>
-      <div class="buttons">
-        <button onclick="Info(this)" class="btn-info">Ver Mais</button>
-        <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
-      </div>
-      <div class="info" style="display: none;">
-         <img src="img/opala t.jpeg" alt="Costas do opala">
-        <p><strong> Preço:</strong> R$ 65.000,00<br>Motor 4.1L 6 cilindros, 171 cv, tração traseira</p>
-      </div>
-    </div>
+        <div class="card" data-preco="65000">
+          <img src="img/opala f.jpeg" alt="Opala Comodoro 1981">
+          <h3>Opala Comodoro 1981</h3>
+          <p>O rei dos clássicos brasileiros.</p>
+          <div class="buttons">
+            <button onclick="Info(this)" class="btn-info">Ver Mais</button>
+            <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
+          </div>
+          <div class="info" style="display: none;">
+            <img src="img/opala t.jpeg" alt="Traseira">
+            <p><strong>R$ 65.000,00</strong><br>Motor 4.1L 6 cil. • 171 cv</p>
+          </div>
+        </div>
 
-     <!-- CARD 7 -->
-    <div class="card" data-preco="50000">
-      <img src="img/fusca frente.jpg" alt="Fusca Oval 1954">
-      <h3>Fusca Oval 1954</h3>
-      <p>Um ovinho encantado: carisma redondo, sorriso na frente, coração barulhento de boxer e alma eterna </p>
-      <div class="buttons">
-        <button onclick="Info(this)" class="btn-info">Ver Mais</button>
-        <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
+        <div class="card" data-preco="42500">
+          <img src="img/omega f.webp" alt="Omega CD 1994">
+          <h3>Omega CD 1994 Placa Preta</h3>
+          <p>Transatlântico brasileiro de luxo.</p>
+          <div class="buttons">
+            <button onclick="Info(this)" class="btn-info">Ver Mais</button>
+            <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
+          </div>
+          <div class="info" style="display: none;">
+            <img src="img/omega t.jpg" alt="Traseira">
+            <p><strong>R$ 42.500,00</strong><br>Motor 3.0 6 cil. • Placa preta</p>
+          </div>
+        </div>
       </div>
-      <div class="info" style="display: none;">
-         <img src="img/fusca costas.webp" alt="Costas do fusca">
-        <p><strong> Preço:</strong> R$ 60.000,00<br>Possui motor 1.2 boxer refrigerado a ar de 30 cv.</p>
-      </div>
-    </div>
+    </section>
 
-     <!-- CARD 8 -->
-    <div class="card" data-preco="42500">
-      <img src="img/omega f.webp" alt="Omega CD 1994">
-      <h3>Omega CD 1994 placa preta</h3>
-      <p>Um transatlântico majestoso das estradas brasileiras; elegante, imponente e inesquecível — o Omega CD 1994.</p>
-      <div class="buttons">
-        <button onclick="Info(this)" class="btn-info">Ver Mais</button>
-        <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
+    <!-- MERCURY -->
+    <section class="marca-section">
+      <h2 class="marca-titulo">MERCURY</h2>
+      <div class="cards-grid">
+        <div class="card" data-preco="125000">
+          <img src="img/monterrey f.jpeg" alt="Monterrey 1963">
+          <h3>Monterrey Conversível 1963</h3>
+          <p>Luxo americano em forma de conversível.</p>
+          <div class="buttons">
+            <button onclick="Info(this)" class="btn-info">Ver Mais</button>
+            <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
+          </div>
+          <div class="info" style="display: none;">
+            <img src="img/monterrey t.jpeg" alt="Traseira">
+            <p><strong>R$ 125.000,00</strong><br>Motor 6.4L V8 • 330 cv</p>
+          </div>
+        </div>
       </div>
-      <div class="info" style="display: none;">
-         <img src="img/omega t.jpg" alt="Costas do omega">
-        <p><strong> Preço:</strong> R$ 42.500,00<br>Omega CD ano 1994 motor 6 cilindros 3.0 PLACA PRETA rodas aro 17.</p>
-      </div>
-    </div>
+    </section>
 
-     <!-- CARD 9 -->
-    <div class="card" data-preco="18900">
-      <img src="https://www.picellileiloes.com.br/arquivos/leiloes/lotes/imagens/60df28eaa1f90.peg" alt="Corsel 2 1979">
-      <h3>Corsel II 1979</h3>
-      <p>Um cupê nervoso das ruas brasileiras: faróis duplos, rabeta alta e atitude de quem manda no asfalto</p>
-      <div class="buttons">
-        <button onclick="Info(this)" class="btn-info">Ver Mais</button>
-        <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
+    <!-- VOLKSWAGEN -->
+    <section class="marca-section">
+      <h2 class="marca-titulo">VOLKSWAGEN</h2>
+      <div class="cards-grid">
+        <div class="card" data-preco="60000">
+          <img src="img/fusca frente.jpg" alt="Fusca Oval 1954">
+          <h3>Fusca Oval 1954</h3>
+          <p>O mais querido clássico do Brasil.</p>
+          <div class="buttons">
+            <button onclick="Info(this)" class="btn-info">Ver Mais</button>
+            <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
+          </div>
+          <div class="info" style="display: none;">
+            <img src="img/fusca costas.webp" alt="Traseira">
+            <p><strong>R$ 60.000,00</strong><br>Motor 1.2 boxer • 30 cv</p>
+          </div>
+        </div>
+
+        <div class="card" data-preco="28000">
+          <img src="img/passat f.jpeg" alt="Passat LS 1980">
+          <h3>Passat LS 1980</h3>
+          <p>Design alemão com alma brasileira.</p>
+          <div class="buttons">
+            <button onclick="Info(this)" class="btn-info">Ver Mais</button>
+            <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
+          </div>
+          <div class="info" style="display: none;">
+            <img src="img/passat t.jpeg" alt="Traseira">
+            <p><strong>R$ 28.000,00</strong><br>Motor 1.6L • 85 cv</p>
+          </div>
+        </div>
       </div>
-      <div class="info" style="display: none;">
-         <img src="https://www.picellileiloes.com.br/arquivos/leiloes/lotes/imagens/60df28eaa2885.peg" alt="Costas do corsel">
-        <p><strong> Preço:</strong> R$ 18.900,00<br>Corcel II 1979: motor 1.4, câmbio manual 4 marchas e tração dianteira.</p>
-      </div>
-    </div> 
+    </section>
+
   </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <h3>Entre em contato conosco</h3>
+      <p>Realize o sonho de ter um clássico na sua garagem</p>
+      <div class="contato">
+        <p>WhatsApp: (14) 99163-0339</p>
+        <p>Email: pietromessias39@gmail.com</p>
+        <p>Instagram: @ph.santtxs</p>
+      </div>
+      <p class="copy">© 2025 MarketPiece Car's • Todos os direitos reservados</p>
+    </div>
+  </footer>
 </body>
 </html>
