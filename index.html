@@ -8,6 +8,7 @@
   <script src="script.js"></script>
 </head>
 <body>
+
   <header class="header">
     <img src="img/logo.png" alt="Logo MarketPiece Car's" class="logo">
     <h1 class="titulo">Loja de Carros Antigos</h1>
@@ -17,8 +18,8 @@
     <p>Clássicos restaurados com paixão • Peças únicas da história automotiva</p>
   </div>
 
-  <!-- MODAL -->
-  <div id="modalCompra" class="modal" class="modal" style="display: none;">
+  <!-- MODAL VINTAGE (bege + marrom) – exatamente o que você queria -->
+  <div id="modalCompra" class="modal" style="display: none;">
     <div class="modal-content">
       <span class="close" onclick="fecharModal()">&times;</span>
       <h2>Finalizar Compra</h2>
@@ -32,42 +33,41 @@
       <div class="total-compra">
         <h3>Total: <span id="valorTotal">R$ 0,00</span></h3>
       </div>
-      </div>
       <button onclick="confirmarCompra()" class="btn-confirmar">Confirmar Compra</button>
     </div>
   </div>
 
   <div class="container">
 
+    <!-- FORD (Mustang + Belina + Corcel juntos) -->
     <section class="marca-section">
       <h2 class="marca-titulo">FORD</h2>
       <div class="cards-grid">
-        
+
         <div class="card" data-preco="85000">
-          <img src="https://tse1.mm.bing.net/th/id/OIP.U_lml1ebqLOD8Nd0U5KfEAHaE8" alt="Ford Mustang Mach 1 1973">
+          <img src="img/ChatGPT Image 28 de nov. de 2025, 21_16_00.png" alt="Ford Mustang Mach 1 1973">
           <h3>Mustang Mach 1 1973</h3>
-          <p>Muscle car americano com motor V8 351 Cleveland.</p>
+          <p>Um dos carros esportivos mais marcantes, conhecido pelo visual agressivo e pelo desempenho forte do V8.</p>
           <div class="buttons">
             <button onclick="Info(this)" class="btn-info">Ver Mais</button>
             <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
           </div>
           <div class="info" style="display: none;">
-            <img src="https://c8.alamy.com/comp/2YW58GP/bristol-uk-august-11-2024-rear-view-of-dark-green-ford-mustang-1969-mach-1-2YW58GP.jpg" alt="Traseira">
+            <img src="img/ChatGPT Image 28 de nov. de 2025, 21_21_39.png" alt="Traseira">
             <p><strong>R$ 85.000,00</strong><br>351 Cleveland V8 • 275 cv • 0-100 em 7,5s</p>
           </div>
         </div>
 
-    
         <div class="card" data-preco="32000">
           <img src="img/belina f.jpeg" alt="Belina Luxo 1973">
           <h3>Belina Luxo 1973</h3>
-          <p>Clássico brasileiro robusto e cheio de história.</p>
+          <p>Uma perua espaçosa e prática, valorizada pelo conforto simples e pela versatilidade para uso familiar.</p>
           <div class="buttons">
             <button onclick="Info(this)" class="btn-info">Ver Mais</button>
             <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
           </div>
           <div class="info" style="display: none;">
-            <img src="img/belina t.jpeg" alt="Traseira">
+            <img src="img/WhatsApp Image 2025-11-28 at 21.18.11.jpeg" alt="Traseira">
             <p><strong>R$ 32.000,00</strong><br>Motor 1.4L • 68 cv • Tração dianteira</p>
           </div>
         </div>
@@ -75,7 +75,7 @@
         <div class="card" data-preco="18900">
           <img src="https://www.picellileiloes.com.br/arquivos/leiloes/lotes/imagens/60df28eaa1f90.peg" alt="Corcel II 1979">
           <h3>Corcel II 1979</h3>
-          <p>Cupê nervoso com atitude única.</p>
+          <p>Um sedã leve e econômico, conhecido pelo estilo elegante e pela dirigibilidade suave.</p>
           <div class="buttons">
             <button onclick="Info(this)" class="btn-info">Ver Mais</button>
             <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
@@ -85,6 +85,21 @@
             <p><strong>R$ 18.900,00</strong><br>Motor 1.4 • Câmbio manual 4 marchas</p>
           </div>
         </div>
+
+         <div class="card" data-preco="51000">
+          <img src="https://bicestersportscars.co.uk/wp-content/uploads/2021/03/IMG_9154-1030x687.jpg" alt="Ford Capri 1970">
+          <h3>Ford Capri MK1 1970</h3>
+          <p>Um Ford Capri MK1 GT GXL 1970, sendo a versão mais luxuosa do carro, conhecido como “Mustang europeu”.</p>
+          <div class="buttons">
+            <button onclick="Info(this)" class="btn-info">Ver Mais</button>
+            <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
+          </div>
+          <div class="info" style="display: none;">
+            <img src="img/WhatsApp Image 2025-11-28 at 21.55.09.jpeg" alt="Traseira">
+            <p><strong>R$ 51.000,00</strong><br>Motor 3.0 • 140 cv • V6 • Tração traseira</p>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -92,47 +107,63 @@
     <section class="marca-section">
       <h2 class="marca-titulo">CHEVROLET</h2>
       <div class="cards-grid">
+
         <div class="card" data-preco="45000">
           <img src="img/C-15 f.jpeg" alt="C-15 1973">
           <h3>C-15 1973</h3>
-          <p>Caminhonete clássica, robusta e lendária.</p>
+          <p>Uma caminhonete robusta e resistente, conhecida pela força do motor e pela durabilidade no trabalho pesado.</p>
           <div class="buttons">
             <button onclick="Info(this)" class="btn-info">Ver Mais</button>
             <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
           </div>
           <div class="info" style="display: none;">
             <img src="img/c-15 cost.jpg" alt="Traseira">
-            <p><strong>R$ 45.000,00</strong><br>Motor 4.1L 6 cil • 151 cv</p>
+            <p><strong>R$ 45.000,00</strong><br>Motor 4.1L 6 cil. • 151 cv</p>
           </div>
         </div>
 
         <div class="card" data-preco="65000">
           <img src="img/opala f.jpeg" alt="Opala Comodoro 1981">
           <h3>Opala Comodoro 1981</h3>
-          <p>O rei dos clássicos brasileiros.</p>
+          <p>Confortável e refinado, reconhecido pelo bom acabamento e pelo desempenho confiável. O rei dos clássicos brasileiros.</p>
           <div class="buttons">
             <button onclick="Info(this)" class="btn-info">Ver Mais</button>
             <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
           </div>
           <div class="info" style="display: none;">
             <img src="img/opala t.jpeg" alt="Traseira">
-            <p><strong>R$ 65.000,00</strong><br>Motor 4.1L 6 cil. • 171 cv</p>
+            <p><strong>R$ 65.000,00</strong><br>Motor 4.1 • 6 cil • 171 cv</p>
           </div>
         </div>
 
         <div class="card" data-preco="42500">
           <img src="img/omega f.webp" alt="Omega CD 1994">
-          <h3>Omega CD 1994 Placa Preta</h3>
-          <p>Transatlântico brasileiro de luxo.</p>
+          <h3>Omega CD 1994 </h3>
+          <p>Um sedã de luxo brasileiro com motor potente. É lembrado pelo desempenho e acabamento sofisticado.</p>
           <div class="buttons">
             <button onclick="Info(this)" class="btn-info">Ver Mais</button>
             <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
           </div>
           <div class="info" style="display: none;">
             <img src="img/omega t.jpg" alt="Traseira">
-            <p><strong>R$ 42.500,00</strong><br>Motor 3.0 6 cil. • Placa preta</p>
+            <p><strong>R$ 42.500,00</strong><br>Motor 3.0 • 6 cil • 168 cv •Placa preta</p>
           </div>
         </div>
+
+         <div class="card" data-preco="500000">
+          <img src="https://backup.tribunadonorte.com.br/fotos/123927.jpg" alt="Corvette C1 1960">
+          <h3>Corvette C1 1960</h3>
+          <p>Um classico americano, carroceria de fibra de vidro, altamente valorizado por colecionadores.</p>
+          <div class="buttons">
+            <button onclick="Info(this)" class="btn-info">Ver Mais</button>
+            <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
+          </div>
+          <div class="info" style="display: none;">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUUn4IueM9sqEyvKRykI3lVJ4cD5npBU635fBTyuPixwYA4hxa5ci-nzabQHEAMxFpBqKcRvzaSCebaIiHSlIFjpvzwH2e1sKqZBNcUyPwgam-p-C_nvn-dPDTLxy0HAWrxFpyXujMGLs/s400/corvette1953.fte.jpeg=w440-h294-p-k-no-nu" alt="Traseira">
+            <p><strong>R$ 500.000,00</strong><br>Motor 4.3 • V8 • 315cv </p>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -143,7 +174,7 @@
         <div class="card" data-preco="125000">
           <img src="img/monterrey f.jpeg" alt="Monterrey 1963">
           <h3>Monterrey Conversível 1963</h3>
-          <p>Luxo americano em forma de conversível.</p>
+          <p>Um clássico americano imponente, conhecido pelo porte grande, conforto e estilo elegante típico dos anos 60.</p>
           <div class="buttons">
             <button onclick="Info(this)" class="btn-info">Ver Mais</button>
             <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
@@ -163,7 +194,7 @@
         <div class="card" data-preco="60000">
           <img src="img/fusca frente.jpg" alt="Fusca Oval 1954">
           <h3>Fusca Oval 1954</h3>
-          <p>O mais querido clássico do Brasil.</p>
+          <p>O Fusca Oval 1954 tem a icônica janela traseira oval e design clássico dos anos 50. Muito desejado por colecionadores.</p>
           <div class="buttons">
             <button onclick="Info(this)" class="btn-info">Ver Mais</button>
             <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
@@ -177,7 +208,7 @@
         <div class="card" data-preco="28000">
           <img src="img/passat f.jpeg" alt="Passat LS 1980">
           <h3>Passat LS 1980</h3>
-          <p>Design alemão com alma brasileira.</p>
+          <p>Um sedã leve e ágil, apreciado pelo bom desempenho do motor e pela dirigibilidade moderna para a época.</p>
           <div class="buttons">
             <button onclick="Info(this)" class="btn-info">Ver Mais</button>
             <button onclick="comprar(this)" class="btn-comprar">Comprar</button>
@@ -204,5 +235,6 @@
       <p class="copy">© 2025 MarketPiece Car's • Todos os direitos reservados</p>
     </div>
   </footer>
+
 </body>
 </html>

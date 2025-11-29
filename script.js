@@ -9,7 +9,7 @@ function Info(btn) {
     btnOpn.innerText = "Fechar";
   } else {
     info.style.display = "none";
-    card.style.height = "400px";
+    card.style.height = "520px";
     btnOpn.innerText = "Ver Mais";
   }
 }
@@ -28,10 +28,11 @@ function comprar(btn) {
   
   document.getElementById('valorTotal').innerText = `R$ ${parseInt(preco).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`;
   
+
   document.getElementById('modalCompra').style.display = 'flex';
   document.body.style.overflow = 'hidden';
   
-
+  
   setTimeout(() => document.getElementById('nomeCliente').focus(), 300);
 }
 
@@ -46,16 +47,18 @@ function confirmarCompra() {
   const email = document.getElementById('email').value.trim();
   
   if (!nome || !telefone || !email) {
-    alert('Preencha todos os campos obrigatórios!');
+    alert(' Preencha todos os campos obrigatórios!');
     return;
   }
   
   
-  const mensagem = ` *NOVA VENDA - MarketPiece Cars*\n\n *Cliente:* ${nome}\n *Telefone:* ${telefone}\n *Email:* ${email}\n *QUERO COMPRAR!*`;
-  const numeroWhatsApp = "5514991630339"; 
+  const mensagem = `Aguarde...`;
+  
+
+  const numeroWhatsApp = "5514991630339";
   const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
   
-  
+ 
   document.getElementById('modalCompra').innerHTML = `
     <div class="modal-content">
       <h2> Compra Confirmada!</h2>
@@ -69,12 +72,12 @@ function confirmarCompra() {
     </div>
   `;
   
-
+  
   setTimeout(() => {
     window.open(urlWhatsApp, '_blank');
   }, 2000);
   
- 
+  
   setTimeout(() => {
     document.getElementById('nomeCliente').value = '';
     document.getElementById('telefone').value = '';
