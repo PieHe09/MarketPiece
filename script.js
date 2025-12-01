@@ -52,7 +52,7 @@ function confirmarCompra() {
   }
   
   
-  const mensagem = ``;
+  const mensagem = `Olá`;
   
 
   const numeroWhatsApp = "5514991630339";
